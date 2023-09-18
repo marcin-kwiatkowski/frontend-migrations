@@ -1,0 +1,8 @@
+.topbar {
+    height: 50px;
+    background-color: cornflowerblue;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 20px;
+}
