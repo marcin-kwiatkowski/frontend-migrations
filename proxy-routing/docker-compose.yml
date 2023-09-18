@@ -15,3 +15,10 @@ services:
       dockerfile: Dockerfile
     ports:
       - "2001:3000"
+
+  proxy:
+    image: nginx:1.25.2
+    ports:
+      - "8000:80"
+    volumes:
+      - "./nginx/app.conf:/etc/nginx/conf.d/app.conf"
