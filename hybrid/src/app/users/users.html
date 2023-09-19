@@ -1,0 +1,40 @@
+<div class="users-container" ng-controller="UsersCtrl">
+    <!--    <user-list-root class="react-list"></user-list-root>-->
+    <div class="ng-list">
+        <ul>
+            <li class="user"
+                ng-repeat="user in users"
+                ng-click="selectUser(user)"
+                ng-class="{selected: isUserSelected(user)}"
+            >
+                {{user.name + ' ' + user.surname}}
+            </li>
+        </ul>
+    </div>
+
+    <div class="details">
+        <div ng-if="!selectedUser" class="nothing-selected">
+            Please select a person from the list.
+        </div>
+        <div ng-if="selectedUser" class="info">
+            <div class="container">
+                <div class="logo">
+                </div>
+                <div class="user">
+                    <div class="row">
+                        <div class="key">Name:</div>
+                        <div class="value">{{selectedUser.name + ' ' + selectedUser.surname}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="key">E-mail:</div>
+                        <div class="value">{{selectedUser.email}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="key">Age:</div>
+                        <div class="value">{{selectedUser.age}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
