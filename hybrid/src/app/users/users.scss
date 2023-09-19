@@ -1,0 +1,90 @@
+:global {
+  .users-container {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .react-list {
+    flex: 0 0 300px;
+  }
+
+  .ng-list {
+    flex: 0 0 300px;
+
+    .user {
+      padding: 15px;
+      cursor: pointer;
+    }
+
+    ul {
+      overflow: scroll;
+      height: calc(100vh - 80px);
+
+      li {
+        background-color: #ffcccc;
+
+        &.selected {
+          background-color: #ff8080;
+        }
+      }
+
+      li:hover {
+        background-color: #ff4d4d;
+        background-image: url("../../assets/angularjs-logo.png");
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 40px;
+      }
+    }
+  }
+
+  .details {
+    flex: 1;
+    background-color: #ffe6e6;
+    height: calc(100vh - 80px);
+
+    .nothing-selected {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .info {
+      padding: 100px;
+      display: flex;
+      flex-direction: column;
+
+      .container {
+        display: flex;
+        flex-direction: row;
+
+        .logo {
+          flex: 0 0 130px;
+          background-image: url("../../assets/angularjs-logo.png");
+          background-repeat: no-repeat;
+          background-size: 100px;
+        }
+
+        .user {
+          flex: 1;
+
+          .row {
+            display: flex;
+            flex-direction: row;
+            font-size: 20px;
+            padding: 10px;
+
+            .key {
+              flex: 0 0 200px;
+              font-weight: bold;
+            }
+
+            .value {
+              flex: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
