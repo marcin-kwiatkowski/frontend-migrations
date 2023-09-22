@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  app-legacy:
+    image: nginx:1.25.2
+    volumes:
+      - "./app-legacy/src:/usr/share/nginx/html"
+      - "./app-legacy/nginx/app-local.conf:/etc/nginx/conf.d/app-local.conf"
+    ports:
+      - "4000:80"
+
+  app-new:
+    build:
+      context: app-new
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
