@@ -1,3 +1,4 @@
+'use client'
 import styles from './DashboardPage.module.css'
 import pieChartImage from './piechart.svg'
 import salesChartImage from './sales-chart.png'
@@ -6,6 +7,11 @@ import Image from 'next/image';
 
 
 export const DashboardPage = () => {
+  const handleOpenReportsClick = () => {
+    window.parent.postMessage({type: 'navigation', params: {page: 'reports'}}, "http://app.local:4000");
+  }
+
+
   return <div className={styles.content}>
     <div className={styles.header}>
       Dashboard
@@ -16,6 +22,7 @@ export const DashboardPage = () => {
       </div>
       <div className={styles.subsection}>
         <Image src={salesChartImage} alt="Sakes chart" style={{maxWidth: '100%'}}/>
+        <button onClick={handleOpenReportsClick}>Otwórz raporty</button>
       </div>
     </div>
     <div className={styles.section}>
