@@ -1,13 +1,9 @@
-import * as React from 'react'
-import { UserList } from '../users/UserList'
-import { inStoreProvider } from '../store/connectStore'
+import * as React from 'react';
+import { UserList } from '../users/UserList';
+import { inStoreProvider } from '../store/connectStore';
 
-class UserListRoot extends React.Component {
-    render() {
-        return (
-            <UserList/>
-        )
-    }
-}
+const UserListRoot = () => {
+  return <UserList />;
+};
 
-export default inStoreProvider(UserListRoot)
+export default inStoreProvider(UserListRoot);
