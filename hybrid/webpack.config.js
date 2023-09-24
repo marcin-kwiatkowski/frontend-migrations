@@ -80,7 +80,6 @@ module.exports = {
       directory: path.join(__dirname, 'dist'),
     },
     compress: true,
-    open: true,
     historyApiFallback: true,
     port: 3000,
     client: {
